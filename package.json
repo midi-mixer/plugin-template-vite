@@ -3,11 +3,11 @@
   "prettyName": "Template Plugin (Vite)",
   "version": "1.0.0",
   "description": "A template plugin for MIDI Mixer using the Vite bundler.",
-  "main": "dist/index.html",
-  "dev": "http://localhost:3000",
+  "main": "https://plugins.vite.midi-mixer.com/",
+  "dev": "https://plugins.vite.midi-mixer.com/",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "tsc && vite build && workbox generateSW workbox-config.js",
     "serve": "vite preview"
   },
   "settings": {
@@ -38,8 +38,10 @@
     "npm": "7.11.1"
   },
   "devDependencies": {
+    "rollup-plugin-copy": "^3.4.0",
     "typescript": "^4.2.4",
-    "vite": "^2.2.3"
+    "vite": "^2.2.3",
+    "workbox-cli": "^6.1.5"
   },
   "dependencies": {
     "midi-mixer-plugin": "^0.1.7"
