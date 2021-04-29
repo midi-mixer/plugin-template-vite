@@ -1,2 +1,6 @@
 <script type="module" src="/src/main.ts"></script>
-<script src="/sw.js"></script>
+<script>
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("/sw.js");
+  });
+</script>
